@@ -8,7 +8,21 @@ namespace testapp.Core.Services.Search
 {
     public class SearchService : ServiceBase, ISearchService
     {
+        bool Letting = false;
         private readonly ISearchApi _apiClient;
+
+        public MvvmCross.Commands.IMvxAsyncCommand<SearchPropertyResult> ToLetAsyncCommand { get; private set; }
+        public MvvmCross.Commands.IMvxAsyncCommand<SearchPropertyResult> ToSellAsyncCommand { get; private set; }
+        
+        private async Task ToLetAsync(SearchPropertyResult searchPropertyResult)
+        {
+            Letting = true;
+        }
+
+        private async Task ToSellAsync(SearchPropertyResult searchPropertyResult)
+        {
+            Letting = false;
+        }
 
         public SearchService(IMvxLog log) : base(log, "https://search.purplebricks.co.uk")
         {
@@ -23,7 +37,7 @@ namespace testapp.Core.Services.Search
                 locationPrompt.Longitude,
                 pageNumber,
                 pageSize,
-                toLet);
+                Letting);
         }
     }
 }
