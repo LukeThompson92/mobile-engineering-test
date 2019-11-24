@@ -1,0 +1,14 @@
+This objective was particularly tricky for me to work around as the application did not run, I was unable to see the results. 
+From the code I can see there might be some problems as it searches for properties specified using the two buttons I had put in place (To Let + To Sell) but I am unsure if it actually finds properties that would fit that criteria.
+As the FindProperties portion still runs on a runtime boolean called toLet rather then my custom made boolean 'Letting'
+
+        public async Task<SearchResult> **FindProperties**(LocationPromptResult locationPrompt, bool toLet = false, int pageNumber = 1, int pageSize = 10)
+        {
+
+                Letting);
+
+During the FindProperties section it will still look for a specific Boolean titled 'toLet' which I struggled to access directly. In this case the parameter had to be a compile time constant and I was unable to do:
+bool toLet = Letting
+
+To set it to the customer variable I had specified. I searched for ages on tutorials on how to reference or access booleans from script to script from C#.
+ Unfortunately all that came up( Despite searching for both visual Studio and Xamarin) are tons and tons of results regarding Unity which makes this easier with a .GetComponent command allows for easy access.
