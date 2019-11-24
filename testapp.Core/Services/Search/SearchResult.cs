@@ -44,6 +44,12 @@ namespace testapp.Core.Services.Search
 
         [JsonIgnore]
         public string LargeImage => string.IsNullOrWhiteSpace(Image?.MediumImage) ? string.Empty : Image.MediumImage.Replace(@"/medium/", @"/large/");
+   
+        [JsonIgnore]
+        public string FormatAddress => Address;
+
+        [JsonIgnore]
+        public string FormatPostcode => Postcode;
     }
 
     public class PropertySearchImage
