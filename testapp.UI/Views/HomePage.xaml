@@ -58,6 +58,20 @@
                             Style="{StaticResource PrimaryButton}"
                             Text="Search"
                             VerticalOptions="End" />
+                                      
+                  <Button Margin="5,0,15,15"                     
+                    HorizontalOptions="Fill"
+                    Style="{StaticResource PrimaryButton}"
+                    Text="To Let"
+                    Command="{Binding ToLetAsync}"
+                    VerticalOptions="End" />
+
+                    <Button Margin="5,0,20,20"
+                    HorizontalOptions="Fill"
+                    Style="{StaticResource PrimaryButton}"
+                    Text="To Sell"
+                    Command="{Binding ToSellAsync}"
+                    VerticalOptions="End" />
                 </StackLayout>                
             </StackLayout>
             
