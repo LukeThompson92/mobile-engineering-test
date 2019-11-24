@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <views:MvxContentPage x:TypeArguments="viewModels:PropertiesViewModel"
                       xmlns="http://xamarin.com/schemas/2014/forms" 
                       xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
@@ -75,7 +75,7 @@
                     <ListView.ItemTemplate>
                         <DataTemplate>                        
                             <ViewCell>
-                                <StackLayout Padding="15, 15, 15, 5" 
+                                <StackLayout Padding="20, 20, 20, 5" 
                                              HorizontalOptions="FillAndExpand" 
                                              VerticalOptions="FillAndExpand"
                                              BackgroundColor="White">
@@ -123,13 +123,50 @@
                                                              Padding="0,5">
                                                     
                                                    <StackLayout Margin="0,0,0,-2">
-                                                        
+
+                                                        <Label FontSize="Large" 
+                                                               Text="{Binding FormatAddress}" 
+                                                               TextColor="{StaticResource BrandPurple}" />
+                                                    </StackLayout>
+                                                </StackLayout>
+                                            </StackLayout>
+                                            
+                                            <StackLayout Grid.Row="2" 
+                                                         HorizontalOptions="FillAndExpand" 
+                                                         Spacing="0"
+                                                         Margin="10,0,0,0"
+                                                         Padding="1">
+
+                                                <StackLayout Orientation="Horizontal"
+                                                             Padding="0,5">
+
+                                                    <StackLayout Margin="0,0,0,-2">
+
+                                                        <Label FontSize="Large" 
+                                                               Text="{Binding FormatPostcode}" 
+                                                               TextColor="{StaticResource BrandPurple}" />
+                                                    </StackLayout>
+                                                </StackLayout>
+                                            </StackLayout>
+
+                                            <StackLayout Grid.Row="3" 
+                                                         HorizontalOptions="FillAndExpand" 
+                                                         Spacing="0"
+                                                         Margin="10,0,0,0"
+                                                         Padding="1">
+
+                                                <StackLayout Orientation="Horizontal"
+                                                             Padding="0,5">
+
+                                                    <StackLayout Margin="0,0,0,-2">
+
                                                         <Label FontSize="Large" 
                                                                Text="{Binding FormattedMarketPrice}" 
                                                                TextColor="{StaticResource BrandPurple}" />
-                                                   </StackLayout>
+                                                    </StackLayout>
                                                 </StackLayout>
                                             </StackLayout>
+
                                         </Grid>
                                     </StackLayout>
                                 </StackLayout>
