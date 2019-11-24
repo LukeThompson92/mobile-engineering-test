@@ -13,5 +13,10 @@ namespace testapp.UI.Views
         {
             InitializeComponent();
         }
+        
+        private void OnButtonClicked(object sender, System.EventArgs args)
+        {
+            Xamarin.Forms.Device.OpenUri(new System.Uri("www.purplebricks.com"));
+        }
     }
 }
